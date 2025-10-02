@@ -43,7 +43,7 @@ public class GameMenu {
                         Combat battle = new Combat(hero, gulDan);
                         battle.startBattle();
                         if (hero.getHealth() <= 0) {
-                            System.out.println("\n" + hero.getName() + " Has died! \n GAME OVER!");
+                            System.out.println("\n GAME OVER");
                             gameIsRunning = false;
                         }
                     } else {
