@@ -1,7 +1,6 @@
 package org.example.Characters;
 
-abstract class Monster extends Characters {
-
+public abstract class Monster extends Characters {
     private int xpReward;
     private int goldReward;
 

@@ -1,6 +1,6 @@
 package org.example.Characters;
 
-import org.example.Helper;
+import org.example.Menu.Helper;
 
 public class GulDan extends Monster {
     public GulDan(){
@@ -13,10 +13,10 @@ public class GulDan extends Monster {
 
         if (chance <= 30) {
             damage = Helper.randomInt(10, 40);
-            System.out.println(getName() + " uses a SPECIAL ATTACK on " + target.getName() + " and deals " + damage + " damage!");
+            System.out.println("\n" + getName() + " uses a SPECIAL ATTACK on " + target.getName() + " and deals " + damage + " damage!");
         } else {
             damage = Helper.randomInt(3, 20);
-            System.out.println(getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
+            System.out.println("\n" + getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
         }
         target.takeDamage(damage);
     }
@@ -27,9 +27,9 @@ public class GulDan extends Monster {
         setHealth(getHealth() - damage);
         if (getHealth() <= 0) {
             setHealth(0);
-            System.out.println(getName() + " has died!");
+            System.out.println("\n" + getName() + " has died!");
         } else {
-            System.out.println(getName() + " takes " + damage + " damage, their hp is now " + getHealth());
+            System.out.println("\n" + getName() + " takes " + damage + " damage, their hp is now " + getHealth());
         }
     }
 }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Menu;
 
 public interface Helper {
     static int randomInt(int min, int max){
@@ -9,7 +9,7 @@ public interface Helper {
         try {
             Thread.sleep(time);
         } catch(InterruptedException e) {
-            e.printStackTrace();  // vi hanterar eventuella avbrott
+            e.printStackTrace();
         }
     }
 }

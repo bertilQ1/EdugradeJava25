@@ -50,10 +50,14 @@ public class Hero extends Characters {
         return equippedWeapon;
     }
 
+    public int getAttackDamage() {
+        return equippedWeapon.getDamage();
+    }
+
     @Override
     public void attack(Characters target) {
         int damage = equippedWeapon.getDamage();
-        System.out.println(getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
+        System.out.println("\n" + getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
         target.takeDamage(damage);
     }
 
@@ -62,16 +66,15 @@ public class Hero extends Characters {
         setHealth(getHealth() - damage);
         if (getHealth() <= 0) {
             setHealth(0);
-            System.out.println(getName() + " has died!");
+            System.out.println("\n" + getName() + " has died!");
         } else {
-            System.out.println(getName() + " takes " + damage + " damage, their hp is now " + getHealth());
+            System.out.println("\n" + getName() + " takes " + damage + " damage, their hp is now " + getHealth());
         }
     }
     public void gainXp(int gainedXp) {
         xp += gainedXp;
         if (xp >= 100) {
             levelUp();
-
         }
     }
 
@@ -81,7 +84,7 @@ public class Hero extends Characters {
         int newHp = 100 + (level - 1) * 10;
         setHealth(newHp);
         setMaxHp(newHp);
-        System.out.println("You leveled up to " + level + "!");
+        System.out.println("\n" + "You leveled up to " + level + "!");
         if (xp >= 100) {
             levelUp();
         }

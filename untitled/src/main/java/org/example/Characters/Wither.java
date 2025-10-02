@@ -1,6 +1,6 @@
 package org.example.Characters;
 
-import org.example.Helper;
+import org.example.Menu.Helper;
 
 public class Wither extends Monster implements Helper {
     public Wither() {
@@ -9,7 +9,7 @@ public class Wither extends Monster implements Helper {
     @Override
     public void attack(Characters target) {
         int damage = (Helper.randomInt(5, 20));
-        System.out.println(getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
+        System.out.println("\n" + getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
         target.takeDamage(damage);
     }
     @Override
@@ -17,9 +17,9 @@ public class Wither extends Monster implements Helper {
         setHealth(getHealth() - damage);
         if (getHealth() <= 0) {
             setHealth(0);
-            System.out.println(getName() + " has died!");
+            System.out.println("\n" + getName() + " has died!");
         } else {
-            System.out.println(getName() + " takes " + damage + " damage, their hp is now " + getHealth());
+            System.out.println("\n" + getName() + " takes " + damage + " damage, their hp is now " + getHealth());
         }
     }
 }
