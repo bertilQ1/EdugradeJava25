@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Hero bertil = new Hero("Bertil",100);
-        GameMenu spel = new GameMenu(bertil);
-        spel.showMainMenu();
+        GameMenu game = new GameMenu(bertil);
+        game.showMainMenu();
     }
 }
 
