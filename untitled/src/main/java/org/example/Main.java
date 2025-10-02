@@ -6,10 +6,6 @@ import org.example.Characters.Wither;
 import org.example.Weapons.Weapon;
 public class Main {
     public static void main(String[] args) {
-        Hero hero = new Hero("Lil pump", 100);
-        LichKing lichKing = new LichKing();
-
-        lichKing.attack(hero);
 
     }
 }

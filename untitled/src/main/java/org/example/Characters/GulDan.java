@@ -2,20 +2,20 @@ package org.example.Characters;
 
 import org.example.Helper;
 
-public class LichKing extends Monster {
-    public LichKing() {
-        super("Lich King", 100, 150, 100);
+public class GulDan extends Monster {
+    public GulDan(){
+        super("Gul'Dan", 200, 0, 0);
     }
-    @Override
+
     public void attack(Characters target) {
         int chance = Helper.randomInt(1, 100);
         int damage;
 
         if (chance <= 30) {
-            damage = Helper.randomInt(5, 30);
+            damage = Helper.randomInt(10, 40);
             System.out.println(getName() + " uses a SPECIAL ATTACK on " + target.getName() + " and deals " + damage + " damage!");
         } else {
-            damage = Helper.randomInt(3, 15);
+            damage = Helper.randomInt(3, 20);
             System.out.println(getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
         }
         target.takeDamage(damage);
