@@ -37,7 +37,7 @@ public class Hero extends Characters {
         super(name, maxHp);
         xp = 0;
         level = 1;
-        gold = 0;
+        gold = 0; // sätter starter guld / level / xp för heron
 
         equippedWeapon = new Weapon();
         equippedWeapon.setName("Excalibur");
@@ -54,9 +54,10 @@ public class Hero extends Characters {
         return equippedWeapon.getDamage();
     }
 
+
     @Override
     public void attack(Characters target) {
-        int damage = equippedWeapon.getDamage();
+        int damage = equippedWeapon.getDamage(); // damage = weapon damagen
         System.out.println("\n" + getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
         target.takeDamage(damage);
     }
@@ -73,19 +74,19 @@ public class Hero extends Characters {
     }
     public void gainXp(int gainedXp) {
         xp += gainedXp;
-        if (xp >= 100) {
+        if (xp >= 100) { // kallar på levelup funktionen
             levelUp();
         }
     }
 
     private void levelUp() {
-        level++;
-        xp -= 100;
-        int newHp = 100 + (level - 1) * 10;
+        level++; // + en level
+        xp -= 100; // tar bort xp'n så den inte sitter och dinglar
+        int newHp = 100 + (level - 1) * 10; // hp +10 varje gång man levlar
         setHealth(newHp);
         setMaxHp(newHp);
         System.out.println("\n" + "You leveled up to " + level + "!");
-        if (xp >= 100) {
+        if (xp >= 100) { // om man får mer än 100 xp på en gång så säkerställer detta att man inte får 250 xp och får då lvl 2 med 150 xp t.ex
             levelUp();
         }
     }

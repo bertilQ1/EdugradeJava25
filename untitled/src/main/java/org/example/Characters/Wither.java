@@ -8,9 +8,9 @@ public class Wither extends Monster implements Helper {
     }
     @Override
     public void attack(Characters target) {
-        int damage = (Helper.randomInt(5, 20));
+        int damage = (Helper.randomInt(5, 20)); // random damage 5-20
         System.out.println("\n" + getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
-        target.takeDamage(damage);
+        target.takeDamage(damage); // gör så att vad withern i det här fallet targetar tar damagen som random damage 5-20 rollade
     }
     @Override
     public void takeDamage(int damage) {

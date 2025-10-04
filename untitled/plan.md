@@ -1,26 +1,26 @@
 Character{ [x]
     Hero [x]
-    Monster{ []
+    Monster{ [x]
         Wither Skeleton (trash mob) [x]
         Lich king (boss) [x]
 }
 
 Weapon [x]
 
-Battle []
+Battle [x]
 
-Shop{ []
-    Upgrade weapon (+ damage) []
-    Heal health (Max health) []
+Shop{ [x]
+    Upgrade weapon (+ damage) [x]
+    Heal health (Max health) [x]
 }
 
-Last boss (once you're level 10){ []
-    if defeated > print "you've won" + play again? []
+Last boss (once you're level 10){ [x]
+    if defeated > print "you've won" + play again? [x typ, sket i play again :P.]
 }
 
 Menu{
-    Battle option []
-    Shop option ()
-    Abandon run option (will ask if you want to play again) []
+    Battle option [x]
+    Shop option (x)
+    Exit game [x]
 }
 

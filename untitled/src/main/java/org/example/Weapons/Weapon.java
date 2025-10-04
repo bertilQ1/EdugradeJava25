@@ -11,7 +11,7 @@ public class Weapon {
     public String getName() {
         return name;
     }
-
+ // setters getters för damage och vapen namnet
     public void setDamage(int damage) {
         this.damage = damage;
     }

@@ -12,10 +12,10 @@ public class LichKing extends Monster {
         int damage;
 
         if (chance <= 30) {
-            damage = Helper.randomInt(5, 30);
+            damage = Helper.randomInt(5, 30); // 5-30 dmg på 30% chans att hända
             System.out.println("\n" + getName() + " uses a SPECIAL ATTACK on " + target.getName() + " and deals " + damage + " damage!");
         } else {
-            damage = Helper.randomInt(3, 15);
+            damage = Helper.randomInt(3, 15); // 70% chans att få normal attacken som rollar 3-15
             System.out.println("\n" + getName() + " Attacks " + target.getName() + " and deals " + damage + " damage!");
         }
         target.takeDamage(damage);

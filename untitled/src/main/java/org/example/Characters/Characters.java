@@ -5,17 +5,17 @@ abstract class Characters {
     private int health;
     private int maxHp;
 
-    public Characters(String name, int maxHp) {
+    public Characters(String name, int maxHp) { //konstruktor för character klasser
         this.name = name;
         this.maxHp = maxHp;
         this.health = maxHp;
     }
 
-    public String getName() {
+    public String getName() { //getter
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) { //setter
         this.name = name;
     }
 
